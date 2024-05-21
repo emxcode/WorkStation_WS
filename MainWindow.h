@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTableWidget>
+#include "Widget/Setting.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,9 +18,14 @@ public:
     ~MainWindow();
     void addItemInMyTodoList(const QVector<QString>& item);
 
+private:
+    Setting *m_settingWidget;
+
 
 private slots:
     void on_pushButtonAddEvent_clicked();
+
+    void on_pushButtonSetSetting_clicked();
 
 Q_SIGNALS:
     void sigNewEvent(const QString& event);

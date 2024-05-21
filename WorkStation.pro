@@ -1,4 +1,5 @@
 QT       += core gui
+QT += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,18 +17,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Connection/Database.cpp \
     Controller.cpp \
+    DataType/Structure.cpp \
+    DataType/Task.cpp \
     ToDoList.cpp \
+    Widget/Setting.cpp \
     main.cpp \
     MainWindow.cpp
 
 HEADERS += \
+    Connection/Database.h \
     Controller.h \
+    DataType/Structure.h \
+    DataType/Task.h \
     MainWindow.h \
-    ToDoList.h
+    ToDoList.h \
+    Widget/Setting.h
 
 FORMS += \
-    MainWindow.ui
+    MainWindow.ui \
+    Widget/Setting.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

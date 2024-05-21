@@ -50,6 +50,19 @@
      <string>Event</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonSetSetting">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>140</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Setting</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
