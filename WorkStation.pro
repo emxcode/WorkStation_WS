@@ -21,8 +21,9 @@ SOURCES += \
     Controller.cpp \
     DataType/Structure.cpp \
     DataType/Task.cpp \
+    Setting/xDirectory.cpp \
     ToDoList.cpp \
-    Widget/Setting.cpp \
+    Setting/Setting.cpp \
     main.cpp \
     MainWindow.cpp
 
@@ -32,12 +33,14 @@ HEADERS += \
     DataType/Structure.h \
     DataType/Task.h \
     MainWindow.h \
+    Setting/xDirectory.h \
     ToDoList.h \
-    Widget/Setting.h
+    Setting/Setting.h
 
 FORMS += \
     MainWindow.ui \
-    Widget/Setting.ui
+    Setting/Setting.ui \
+    Setting/xDirectory.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

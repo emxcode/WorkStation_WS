@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>380</width>
-    <height>228</height>
+    <width>461</width>
+    <height>428</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_4" rowstretch="1,0" rowminimumheight="0,0">
+  <layout class="QGridLayout" name="gridLayout_4">
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -21,11 +21,11 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="0">
-       <layout class="QGridLayout" name="gridLayout" columnstretch="1,5,2">
+       <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,0">
         <item row="0" column="2">
          <widget class="QPushButton" name="pushButtonSetDatabasePath">
           <property name="text">
-           <string>SetDatabase Path</string>
+           <string>Set Path</string>
           </property>
          </widget>
         </item>
@@ -37,9 +37,9 @@
          </widget>
         </item>
         <item row="0" column="0">
-         <widget class="QLabel" name="labelPathHelp">
+         <widget class="QLabel" name="label">
           <property name="text">
-           <string>Path</string>
+           <string>Status: </string>
           </property>
          </widget>
         </item>
@@ -50,26 +50,52 @@
    </item>
    <item row="1" column="0">
     <layout class="QGridLayout" name="gridLayout_3">
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButtonSetDefault">
-       <property name="text">
-        <string>Default</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
+     <item row="1" column="3">
       <widget class="QPushButton" name="pushButtonApplyChange">
        <property name="text">
         <string>Apply</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButtonSetDefault">
+       <property name="text">
+        <string>Default</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
       <widget class="QPushButton" name="pushButtonCancel">
        <property name="text">
         <string>Cancel</string>
        </property>
       </widget>
+     </item>
+     <item row="0" column="1">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="1" column="0">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

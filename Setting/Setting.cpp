@@ -7,33 +7,39 @@ Setting::Setting(QWidget *parent) :
 {
     ui->setupUi(this);
     m_databasePath = new QString;
+    m_xDirectory = new xDirectory;
 }
 
 Setting::~Setting()
 {
     delete ui;
     delete m_databasePath;
+    delete m_xDirectory;
 }
 
 void Setting::on_pushButtonApplyChange_clicked()
 {
-   Q_EMIT sigSetPathToDatabase(m_databasePath);
+    bool hasPathChanged = m_xDirectory->getHasChanged();
+    if(hasPathChanged == true)
+    {
+        m_hasSettingChanged = true;
+    }
+
+    Q_EMIT sigSetPathToDatabase(m_databasePath);
 }
 
 void Setting::on_pushButtonSetDatabasePath_clicked()
 {
-    QFileDialog folder;
-    QString path;
+    m_xDirectory->show();
 
-    folder.setFileMode(QFileDialog::Directory);
-    folder.setOption(QFileDialog::ShowDirsOnly);
-    folder.setWindowTitle("Set Database Path");
-    path = folder.getExistingDirectory(this);
-    ui->labelPath->setText(path);
-    m_databasePath = &path;
 }
 
 void Setting::on_pushButtonCancel_clicked()
 {
     this->close();
+}
+
+void Setting::on_pushButtonSetDefault_clicked()
+{
+
 }

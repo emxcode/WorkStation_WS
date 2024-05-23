@@ -32,3 +32,4 @@ void MainWindow::on_pushButtonSetSetting_clicked()
 {
     m_settingWidget->show();
 }
+

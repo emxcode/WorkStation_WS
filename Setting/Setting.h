@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QFileDialog>
+#include "xDirectory.h"
 
 namespace Ui {
 class Setting;
@@ -25,9 +26,13 @@ private slots:
 
     void on_pushButtonCancel_clicked();
 
+    void on_pushButtonSetDefault_clicked();
+
 private:
     Ui::Setting *ui;
     QString *m_databasePath;
+    xDirectory *m_xDirectory;
+    bool m_hasSettingChanged = false;
 
 Q_SIGNALS:
     void sigSetPathToDatabase(const QString *path);

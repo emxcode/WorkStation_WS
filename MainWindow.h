@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <QTableWidget>
-#include "Widget/Setting.h"
+#include "Setting/Setting.h"
+#include <QMessageBox>
+#include "DataType/Structure.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -13,13 +15,17 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void addItemInMyTodoList(const QVector<QString>& item);
 
+
 private:
     Setting *m_settingWidget;
+
 
 
 private slots:
